@@ -65,7 +65,6 @@ function update_student(){
     let address = document.getElementById("address").value;
 
 let id = document.getElementById("student_id").value;
-alert(id);
 axios.put("https://curd-app-khan.herokuapp.com/user/"+ id,{
    name:name, email:email, address:address
 })
@@ -79,7 +78,6 @@ axios.put("https://curd-app-khan.herokuapp.com/user/"+ id,{
 } 
 
 function delete_student(){
-    alert(student_id);
     let id = document.getElementById("student_id").value;
 axios.delete("https://curd-app-khan.herokuapp.com/user/" + id)
 .then(function(response){
